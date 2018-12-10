@@ -1,0 +1,40 @@
+#!/bin/bash
+# $Id: wpgchk,v 1.1 2018/12/10 16:54:16 fulford Exp fulford $
+# $Source: /src/admin/usr/local/etc/RCS/wpgchk,v $
+# $Revision: 1.1 $
+# Author C W Fulford.
+# Copyright 2016 (c) C W Fulford.
+# Licensed for public use under the LGPL, .
+# For assistance contact fulford@fulford.net 0793 572 8612
+########################################################################
+cmd=`basename $0`
+ver=`echo "$Id: wpgchk,v 1.1 2018/12/10 16:54:16 fulford Exp fulford $"|awk '{print $3,$4,$5}'`
+syntax="$cmd [-c <configfile>] [-d] [-h <hostid>] [-v]|-V"
+while [ $# -gt 0 ] ;do
+	case $1 in 
+		-c) config=$2;shift 2;;
+		-d) set -x;debug=0;shift;;
+		-h) hostid=$2;shift 2;;			
+		-k) keyterm $2; shift 2;;
+		-v) verbose=:;shift;;
+		-V) echo "$cmd $Revision: 1.1 $ $Date: 2018/12/10 16:54:16 $"|awk '{print $1,$3,$6}';exit;;  
+	esac
+done
+tmp=/tmp/$cmd.$$
+
+config=${config:-/usr/local/etc/${cmd}.cf
+[ -r $config ] ||{ echo "$cmd: Can't find $config"
+		   exit 1
+}
+eval `sed <$config -ne "/^$hostid:/,/^$/{/^[\t ]*[^#].*/p}"`
+
+printf "%20s URL %10s Tennis %10s Coaching  %10s Nottingham"
+for url in $urls; do
+	wget $url >$tmp
+	for k in $keyterm;do
+		printf "%20s $url"
+	done
+	  
+done
+
+rm $tmp
