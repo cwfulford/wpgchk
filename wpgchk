@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Id: wpgchk,v 1.1 2018/12/10 16:54:16 fulford Exp fulford $
+# $Id: wpgchk,v 1.1 2018/12/10 16:54:16 fulford Exp $
 # $Source: /src/admin/usr/local/etc/RCS/wpgchk,v $
 # $Revision: 1.1 $
 # Author C W Fulford.
@@ -8,7 +8,7 @@
 # For assistance contact fulford@fulford.net 0793 572 8612
 ########################################################################
 cmd=`basename $0`
-ver=`echo "$Id: wpgchk,v 1.1 2018/12/10 16:54:16 fulford Exp fulford $"|awk '{print $3,$4,$5}'`
+ver=`echo "$Id: wpgchk,v 1.1 2018/12/10 16:54:16 fulford Exp $"|awk '{print $3,$4,$5}'`
 syntax="$cmd [-c <configfile>] [-d] [-h <hostid>] [-v]|-V"
 while [ $# -gt 0 ] ;do
 	case $1 in 
