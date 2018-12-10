@@ -1,17 +1,17 @@
 <pre>
 
 #!/bin/bash
-# $Id: wpgchk.cf,v 1.2 2018/12/10 16:57:36 fulford Exp fulford $
+# $Id: wpgchk.cf,v 1.8 2018/12/10 18:47:22 fulford Exp fulford $
 # $Source: /src/admin/usr/local/etc/RCS/wpgchk.cf,v $
-# $Revision: 1.2 $
+# $Revision: 1.8 $
 # Author C W Fulford.
 # Copyright 2016 (c) C W Fulford.
 # Licensed for public use under the LGPL, .
 # For assistance contact fulford@fulford.net 0793 572 8612
 ########################################################################
 
-terms="tennis coaching lessons classes sherwood" 
-urls="www.robustica.co.uk parktennis.co.uk/coaching.html www.jbtennis.co.uk www.acesportscoaching.co.uk www.ontheballcoaching.com www.mytennisuk.com http://activesherwood.com/centres/tennis-centre-nottingham/ "
+terms="Tennis Coaching Lessons Classes Nottingham" 
+urls="www.robustica.co.uk parktennis.co.uk/coaching.html www.jbtennis.co.uk www.acesportscoaching.co.uk www.ontheballcoaching.com www.mytennisuk.com http://activesherwood.com/centres/tennis-centre-nottingham/  www.westbridgfordtennisclub.co.uk"
 ######################################################################
 # This program is free software: you can redistribute it and or      #
 # modify it under the terms of the Lesser GNU General Public License #
